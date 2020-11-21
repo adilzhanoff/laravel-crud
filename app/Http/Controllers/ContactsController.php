@@ -16,7 +16,6 @@ class ContactsController extends Controller
     {
         $contacts = Contacts::all();
         // dd($contacts);
-
         return view('contacts.index', compact('contacts'));
     }
 
@@ -61,7 +60,6 @@ class ContactsController extends Controller
     public function show($id)
     {
         $contact = Contacts::find($id);
-
         return view('contacts.show', compact('contact'));
     }
 
@@ -74,7 +72,6 @@ class ContactsController extends Controller
     public function edit($id)
     {
         $contact = Contacts::find($id);
-
         return view('contacts.edit', \compact('contact'));
     }
 
